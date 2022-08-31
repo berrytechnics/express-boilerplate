@@ -1,11 +1,14 @@
 # Express-Boilerplate
 **Jumpstart** your static user-based web project
 ## Description
+* supports SCSS
+* supports image Compression
 Express-Boilerplate is an **ES6** template for designing a static web project using open-source technologies for a seamless and simple solution to get your project online now.
 This template has *CORS* enabled by default. This can be disabled in server.js
 ## Getting Started
 ### Dependencies
 * Node.js
+* SaSS
 * Yarn (or npm)
 * Code-editor (i.e. VS_Code)
 ### Installing
