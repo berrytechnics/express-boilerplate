@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <%- include('../partials/links') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+<div class="container">
+   <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header"><h1>Dashboard</h1></div>
+                <div class="card-body">
+                    <form action="/user/update" method="POST">
+                        <label for="username">Username</label>
+                        <input type="email" class="form-control" name="username" value="<%=user.username%>">
+                        <label for="admin">is Admin?</label>
+                        <select disabled name="admin" id="admin" class="form-control">
+                            <option value="<%=user.admin%>" selected ><%=user.admin%></option>
+                            <option value="<%=!user.admin%>"  ><%=!user.admin%></option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </div>
+</div>
+<%- include('../partials/scripts') %>
+</body>
+</html>

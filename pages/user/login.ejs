@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+    <%- include('../partials/links') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+<div class="container-fluid">
+   <div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h1>Login</h1>
+            </div>
+            <form action="/user/login" method="POST">
+                <div class="card-body">
+                    <label for="username">Username</label><span class="text-danger">*</span>
+                    <input required type="username" name="username" id="username" class="form-control mb-2">
+                    <label for="password">Password</label><span class="text-danger">*</span>
+                    <input required type="password" name="password" id="password" class="form-control mb-2">
+                </div>
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-success text-nowrap d-block w-100" value="Login">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h1>Register User</h1>
+            </div>
+            <form action="/user/register" method="POST">
+                <div class="card-body">
+                    <label for="firstname">First Name</label><span class="text-danger">*</span>
+                    <input required type="text" name="firstname" id="firstname" class="form-control mb-2">
+                    <label for="lastname">Last Name</label><span class="text-danger">*</span>
+                    <input required type="text" name="lastname" id="lastname" class="form-control mb-2">
+                    <label for="username">Email (this will be your username)</label><span class="text-danger">*</span>
+                    <input required type="username" name="username" id="username" class="form-control mb-2">
+                    <label for="password">Password</label><span class="text-danger">*</span>
+                    <input required type="password" name="password" id="password" class="form-control mb-2">
+                    <label for="password2">Verify Password</label><span class="text-danger">*</span>
+                    <input required type="password" name="password2" id="password2" class="form-control mb-2">
+                    <label for="admin">Admin Code (if applicable)</label>
+                    <input type="password" name="admin" id="admin" class="form-control mb-2">
+                </div>
+                <div class="card-footer">
+                    <input type="submit" class="btn btn-primary text-nowrap d-block w-100" value="Register User">
+                </div>
+            </form>
+        </div>
+    </div>
+   </div> 
+</div>
+<%- include('../partials/scripts') %>
+</body>
+</html>

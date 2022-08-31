@@ -1,0 +1,29 @@
+{
+  "name": "express-boilerplate",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["express","boilerplate","template"],
+  "author": "@berrytechnics",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "chart.js": "^3.9.1",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.3",
+    "jquery": "^3.6.1",
+    "mongoose": "^6.5.3",
+    "passport": "^0.6.0",
+    "passport-local-mongoose": "^7.1.2"
+  }
+}
