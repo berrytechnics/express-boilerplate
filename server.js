@@ -33,17 +33,16 @@ app.use(passport.session());
 passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-app.use('/css',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/bootstrap/dist/css')))
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/bootstrap/dist/js')))
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/jquery/dist')))
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/chart.js/dist')))
 app.use('/',indexRouter);
 app.use('/user',userRouter);
-app.use((req, res, next)=>{
-    var err = new Error(`We cant seem to find that!`);
-    err.status = 404;
-    next(err);
-});
+//need error handler
+app.use((req,res,next)=>{
+    req.flash('red','We couldn\'t find that...')
+    res.redirect('/')
+})
 app.listen(process.env.PORT||3000,()=>{
     console.log('Server started...')
     mongoose.connect(process.env.MONGO_URI,{
