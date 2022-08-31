@@ -12,7 +12,7 @@ router.get(['/login','/register'],async(req,res)=>{
 })
 
 router.get('/chart',(req,res)=>{
-    res.render('../pages/chart')
+    res.render('../pages/chart',{user:req.user})
 })
 
 export default router

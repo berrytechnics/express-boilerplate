@@ -24,6 +24,10 @@ npm start
 ## Author
 @berrytechnics
 ## Version History
+* 1.1
+* added sass support
+* added image compression
+___
 * 1
 * Initial Release
 ## License

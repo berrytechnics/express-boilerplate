@@ -1,22 +1,29 @@
 {
   "name": "express-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run sass && nodemon",
+    "sass": "sass src/main.scss public/style.css",
+    "img": "node src/imgCompress",
+    "build": "npm run sass && npm run img && echo \"Web App Compiled.\""
   },
-  "keywords": ["express","boilerplate","template"],
+  "keywords": [
+    "express",
+    "boilerplate",
+    "template"
+  ],
   "author": "@berrytechnics",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^5.2.0",
     "chart.js": "^3.9.1",
+    "compression": "^1.7.4",
     "connect-ensure-login": "^0.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-flash": "^0.0.2",
@@ -25,5 +32,12 @@
     "mongoose": "^6.5.3",
     "passport": "^0.6.0",
     "passport-local-mongoose": "^7.1.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.2",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "sass": "^1.54.8"
   }
 }

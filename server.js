@@ -4,6 +4,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import {fileURLToPath} from "url";
 import session from 'express-session';
+import compression from 'compression';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import passport from 'passport';
@@ -15,6 +16,7 @@ import userRouter from './routes/user.js';
 const app = express();
 app.set('view engine','ejs');
 app.use(cors());
+app.use(compression());
 app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
