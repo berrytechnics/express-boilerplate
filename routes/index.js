@@ -11,4 +11,8 @@ router.get(['/login','/register'],async(req,res)=>{
     res.redirect('/user/login')
 })
 
+router.get('/chart',(req,res)=>{
+    res.render('../pages/chart')
+})
+
 export default router

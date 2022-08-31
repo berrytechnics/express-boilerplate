@@ -28,7 +28,6 @@ app.use(session({
 app.use(flash())
 app.use(passport.initialize());
 app.use(passport.session());
-// passport.use(new PassportLocal.Strategy(User.authenticate()));
 passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -38,7 +37,6 @@ app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.ur
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/chart.js/dist')))
 app.use('/',indexRouter);
 app.use('/user',userRouter);
-
 app.use((req, res, next)=>{
     var err = new Error(`We cant seem to find that!`);
     err.status = 404;
@@ -51,5 +49,4 @@ app.listen(process.env.PORT||3000,()=>{
         useUnifiedTopology:true
     })
 })
-
 export default app
