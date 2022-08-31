@@ -2,6 +2,7 @@
 **Jumpstart** your static user-based web project
 ## Description
 Express-Boilerplate is an **ES6** template for designing a static web project using open-source technologies for a seamless and simple solution to get your project online now.
+This template has *CORS* enabled by default. this can be disabled in server.js
 ## Getting Started
 ### Dependencies
 * Node.js
