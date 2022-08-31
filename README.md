@@ -8,7 +8,7 @@ Express-Boilerplate is an **ES6** template for designing a static web project us
 * Yarn (or npm)
 * Code-editor (i.e. VS_Code)
 ### Installing
-* Download and extract the latest release
+* Download and extract the latest release https://github.com/berrytechnics/Express-Boilerplate/archive/refs/heads/main.zip
 * Create a file in the project directory named .env
 * Paste the following code into .env, where *mongodb_URI* is a valid mongodb uri, and *admin_code* is a custom passcode.
 ```
