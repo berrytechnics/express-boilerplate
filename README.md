@@ -9,7 +9,7 @@ This template has *CORS* enabled by default. This can be disabled in server.js
 ## Getting Started
 ### Dependencies
 * Node.js
-* SaSS
+* Sass
 * Yarn (or npm)
 * Code-editor (i.e. VS_Code)
 ### Installing
