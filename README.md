@@ -15,24 +15,15 @@ Express-Boilerplate is an **ES6** template for designing a static web project us
 MONGODB_URI=<mongdb_URI>
 ADMIN_CODE=<admin_code>
 ```
-* in a terminal, navigate to the project folder
-* execute each line of code.
-```
-npm run sass
-npm run imgCompress
-```
-* "sass" will compile css
-* "imgCompress" will compress the source images
-* These only need to be run on changes to scss or images
 ### Executing program
-* to start the server :
+* to start the server run
 ```
 npm start
 ```
 ## Author
 @berrytechnics
 ## Version History
-* 0.1
+* 1
 * Initial Release
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
