@@ -5,7 +5,7 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "npm run sass && npm run img && node server",
+    "dev": "npm run sass && npm run img && node .",
     "sass": "sass src/main.scss public/style.css",
     "img": "node src/imgCompress",
     "build-patch": "npm run sass && npm run img && auto-changelog && git commit -a -m \"BUILD +patch\" && git push && npm version patch",
