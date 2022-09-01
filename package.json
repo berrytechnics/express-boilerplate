@@ -5,10 +5,12 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "npm run sass && nodemon",
+    "dev": "npm run sass && npm run img && nodemon",
     "sass": "sass src/main.scss public/style.css",
     "img": "node src/imgCompress",
-    "build": "npm run sass && npm run img && echo \"Web App Compiled.\""
+    "build-patch": "npm version patch &&npm run sass && npm run img && echo \"Web App Compiled.\"",
+    "build-minor": "npm version minor &&npm run sass && npm run img && echo \"Web App Compiled.\"",
+    "build-major": "npm version major &&npm run sass && npm run img && echo \"Web App Compiled.\""
   },
   "keywords": [
     "express",

@@ -23,7 +23,7 @@ ADMIN_CODE=<admin_code>
 ### Executing program
 * to start the server run
 ```
-yarn run build
+yarn run dev
 yarn start
 ```
 ## Author
