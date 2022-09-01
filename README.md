@@ -12,6 +12,7 @@ This template has *CORS* enabled by default. This can be disabled in server.js
 * Sass
 * Yarn (or npm)
 * Git
+* auto-changelog (NPM.js)
 * Code-editor (i.e. VS_Code)
 ### Installing
 * Clone Repo
