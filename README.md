@@ -29,8 +29,9 @@ ADMIN_CODE=<admin_code>
 ### Executing program
 * To start the server run
 ```
+cd .
+yarn
 yarn run dev
-yarn start
 ```
 * After modifications, a new release can be made by running one of the three commands:
 ``` 
