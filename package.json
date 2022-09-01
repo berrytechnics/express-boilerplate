@@ -8,9 +8,9 @@
     "dev": "npm run sass && npm run img && nodemon",
     "sass": "sass src/main.scss public/style.css",
     "img": "node src/imgCompress",
-    "build-patch": "npm version patch && npm run sass && npm run img && echo \"Web App Compiled.\" && auto-changelog && git add * && git commit -m \"build +patch\" ",
-    "build-minor": "npm version minor && git add * && git commit -m \"build +minor\" && npm run sass && npm run img && echo \"Web App Compiled.\"",
-    "build-major": "npm version major && git add * && git commit -m \"build +major\" && npm run sass && npm run img && echo \"Web App Compiled.\""
+    "build-patch": "git commit -a -m \"PRE +patch\" && git push && npm version patch && npm run sass && npm run img && echo \"Web App Compiled.\" && auto-changelog && git commit -a -m \"build +patch\" && git push",
+    "build-minor": "git commit -a -m \"PRE +minor\" && git push && npm version minor && npm run sass && npm run img && echo \"Web App Compiled.\" && auto-changelog && git commit -a -m \"build +minor\" && git push",
+    "build-major": "git commit -a -m \"PRE +major\" && git push && npm version major && npm run sass && npm run img && echo \"Web App Compiled.\" && auto-changelog && git commit -a -m \"build +major\" && git push"
   },
   "keywords": [
     "express",
