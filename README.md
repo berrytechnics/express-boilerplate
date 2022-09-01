@@ -21,19 +21,20 @@ MONGODB_URI=<mongdb_URI>
 ADMIN_CODE=<admin_code>
 ```
 ### Executing program
-* to start the server run
+* To start the server run
 ```
 yarn run dev
 yarn start
 ```
+* After modifications, a new release can be made by running one of the three commands:
+``` 
+yarn run build-patch
+yarn run build-minor
+yarn run build-major
+ ```
 ## Author
 @berrytechnics
 ## Version History
-* 1.1
-* added sass support
-* added image compression
-___
-* 1
-* Initial Release
-## License
+[CHANGELOG.md](https://github.com/berrytechnics/Express-Boilerplate/blob/main/CHANGELOG)
+
 This project is licensed under the MIT License - see the LICENSE.md file for details
