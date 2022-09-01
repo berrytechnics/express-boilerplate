@@ -8,7 +8,6 @@ import compression from 'compression';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import passport from 'passport';
-import PassportLocal from 'passport-local';
 import flash from 'express-flash';
 import User from './database/user.js';
 import indexRouter from './routes/index.js';
@@ -38,7 +37,6 @@ app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.ur
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/chart.js/dist')))
 app.use('/',indexRouter);
 app.use('/user',userRouter);
-//need error handler
 app.use((req,res,next)=>{
     req.flash('red','We couldn\'t find that...')
     res.redirect('/')
