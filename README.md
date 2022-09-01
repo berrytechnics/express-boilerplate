@@ -37,6 +37,7 @@ yarn run build-major
 ## Author
 @berrytechnics
 ## Version History
+* semantic versioning is done automatically with the build-xxx commands
 [CHANGELOG.md](https://github.com/berrytechnics/Express-Boilerplate/blob/main/CHANGELOG.md)
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
