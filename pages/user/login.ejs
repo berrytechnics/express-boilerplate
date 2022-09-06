@@ -48,6 +48,9 @@
                     <input required type="password" name="password2" id="password2" class="form-control mb-2">
                     <label for="admin">Admin Code (if applicable)</label>
                     <input type="password" name="admin" id="admin" class="form-control mb-2">
+                    <label for="captchaText">Captcha</label><span class="text-danger">*</span>
+                    <%-captcha%><br />
+                    <input type="text" name="captchaText" class="form-control mt-2">
                 </div>
                 <div class="card-footer">
                     <input type="submit" class="btn btn-primary text-nowrap d-block w-100" value="Register User">

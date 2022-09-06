@@ -5,12 +5,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "dev": "npm run sass && npm run img && node .",
-    "sass": "sass src/main.scss public/style.css",
-    "img": "node src/imgCompress",
-    "build-patch": "npm run sass && npm run img && auto-changelog && git commit -a -m \"BUILD +patch\" && git push && npm version patch",
-    "build-minor": "npm run sass && npm run img && auto-changelog && git commit -a -m \"BUILD +minor\" && git push && npm version minor",
-    "build-major": "npm run sass && npm run img && auto-changelog && git commit -a -m \"BUILD +major\" && git push && npm version major"
+    "start": "eslint . && node src/build.js && node server",
+    "dev": "node src/build.js && nodemon server"
   },
   "keywords": [
     "express",
@@ -32,12 +28,16 @@
     "express-session": "^1.17.3",
     "jquery": "^3.6.1",
     "mongoose": "^6.5.3",
+    "nodemailer": "^6.7.8",
     "passport": "^0.6.0",
-    "passport-local-mongoose": "^7.1.2"
+    "passport-local-mongoose": "^7.1.2",
+    "svg-captcha": "^1.4.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "auto-changelog": "^2.4.0",
     "dotenv": "^16.0.2",
+    "eslint": "^8.23.0",
     "imagemin": "^8.0.1",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^9.0.2",
