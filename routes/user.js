@@ -34,7 +34,7 @@ router.post('/register',async(req,res)=>{
 			res.redirect('/login')
 		}
 		catch(err){
-			req.flash('red','ERROR: '+err)
+			req.flash('red','ERROR: '+err||'Please contact the site admin.')
 			res.redirect('/login')
 		}
 	}
@@ -56,14 +56,12 @@ router.get('/logout',(req,res)=>{
 	})
 })
 //------------------------------------------------
-router.get('/chat',isAuth,(req,res)=>{
-	res.render('../pages/user/chat',{user:req.user})
-})
 router.get('/dashboard',isAuth,(req,res)=>{
 	res.render('../pages/user/dashboard',{user:req.user})
 })
-router.get('/admin',isAdmin,(req,res)=>{
-	res.render('../pages/user/admin',{user:req.user})
+router.get('/admin',isAdmin,async(req,res)=>{
+	let users = await Users.find({})
+	res.render('../pages/user/admin',{user:req.user,users})
 })
 
 export default router
