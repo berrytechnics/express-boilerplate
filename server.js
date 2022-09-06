@@ -46,7 +46,6 @@ app.use((req,res)=>{
 	req.flash('red','We couldn\'t find that...')
 	res.redirect('/')
 })
-
 server.listen(process.env.PORT||3000,()=>{
 	console.log('\x1b[32m%s\x1b[0m','Server started...')
 	mongoose.connect(process.env.MONGO_URI,{
