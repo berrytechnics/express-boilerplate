@@ -60,8 +60,8 @@ router.get('/dashboard',isAuth,(req,res)=>{
 	res.render('../pages/user/dashboard',{user:req.user})
 })
 router.get('/admin',isAdmin,async(req,res)=>{
-	let users = await Users.find({})
-	res.render('../pages/user/admin',{user:req.user,users})
+	let users = await User.find({})
+	res.render('../pages/user/admin',{user:req.user,users:users})
 })
 
 export default router

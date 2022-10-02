@@ -22,12 +22,12 @@ app.use(compression())
 app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'public')))
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
-app.use(cookieParser('gp2018pd2020'))
+app.use(cookieParser('superSecretSquirrel_1'))
 app.use(session({
-	secret:'gp2018pd2020',
+	secret:'superSecretSquirrel_2',
 	resave:false,
 	saveUninitialized:false,
-	cookie:{maxAge:60000}
+	cookie:{maxAge:1000*60*60*6} // 6 hour cookies
 }))
 app.use(flash())
 app.use(passport.initialize())
@@ -38,7 +38,6 @@ passport.deserializeUser(User.deserializeUser())
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/bootstrap/dist/js')))
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/jquery/dist')))
 app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/chart.js/dist')))
-app.use('/js',express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'node_modules/socket.io/client-dist')))
 app.use('/',indexRouter)
 app.use('/user',userRouter)
 app.use('/api',apiRouter)

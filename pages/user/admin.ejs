@@ -10,17 +10,37 @@
 <body>
     <%- include('../partials/nav') %>
 <div class="container">
+    <h1>Admin Dashboard</h1>
+    <hr>
    <div class="row">
-        <div class="col">
+        <div class="col-6">
             <div class="card">
-                <div class="card-header"><h1>Admin Dashboard</h1></div>
+                <div class="card-header"><h2>Users</h2></div>
                 <div class="card-body">
-                    <p><%-locals.user%></p>
+                    <ul class="list-group">
+                        <% for(u of users){%>
+                            <form action="/api/updateUser" method="POST">
+                                <li class="list-group-item" id="<%=u._id%>">
+                                    <h6><b><%=u.name%></b></h6>
+                                    <label for="username">Username</label>
+                                    <input type="text" class="form-control" value="<%=u.username%>">
+                                    <label for="admin">Global Admin</label>
+                                    <input type="checkbox" name="admin" checked="<%-u.admin%>">
+                                    <label for="admin">Delete User</label>
+                                    <input type="checkbox" name="delete">
+                                    <input type="submit" value="Save Changes" class="d-block ms-auto btn btn-sm btn-warning">
+                                </li>
+                            </form>
+                        <%}%>
+                    </ul>
                 </div>
             </div>
         </div>
    </div>
 </div>
 <%- include('../partials/scripts') %>
+<script>
+
+</script>
 </body>
 </html>
